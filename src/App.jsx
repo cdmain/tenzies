@@ -1,5 +1,5 @@
 import './App.css'
-import Main from "./Main.jsx"
+import Main from "./components/Main.jsx"
 
 export default function App() {
   return (
