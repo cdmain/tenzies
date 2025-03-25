@@ -4,8 +4,9 @@
     height: 100%;
     border-radius: 5px;
     display: flex;
-    justify-content: center;
+    justify-content:space-evenly;
     align-items: center;
+    flex-direction: column;
 }
 
 .die-container {
@@ -22,11 +23,25 @@
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    font-family: Inter, sans-serif;
+    font-family: karla, sans-serif;
     font-weight: 700;
     font-size: 1.75rem
 }
 
 .die:active {
     background: #59E391;
+}
+
+.rollButton {
+    width: 92px;
+    height: 36px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: karla, sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: white;
+    background: #5035FF;
+    box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
 }
