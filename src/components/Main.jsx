@@ -5,6 +5,9 @@ import Die from "./Die"
 export default function Main() {
     const [dice, setDice] = useState(generateAllNewDice())
 
+    const gameWon = dice.every(die => die.isHeld) &&
+        dice.every(die => die.value === dice[0].value)
+
     function generateAllNewDice() {
         return new Array(10)
             .fill(0)
@@ -47,7 +50,9 @@ export default function Main() {
             <div className="dice-container">
                 {diceElements}
             </div>
-            <button className="rollButton" onClick={rollDice}>Roll</button>
+            <button className="rollButton" onClick={rollDice}
+                >{gameWon ? "New Game" : "Roll"}
+            </button>
         </main>
     )
 }
